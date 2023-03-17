@@ -1,12 +1,12 @@
 def main():
     numbers = []
 
-    for i in range(1, 6):
-        number = int(input(f"Digite o {i}. número: "))
+    for i in range(5):
+        number = float(input(f"Digite o {i + 1}º número: "))
         numbers.append(number)
 
-    print(f"Maior número: {min(numbers)}")
-    print(f"Menor número: {max(numbers)}")
+    print(f"Maior número: {max(numbers)}")
+    print(f"Menor número: {min(numbers)}")
 
 
 if __name__ == '__main__':

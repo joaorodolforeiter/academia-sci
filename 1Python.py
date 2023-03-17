@@ -1,20 +1,17 @@
 def main():
     numbers = []
 
-    for i in range(1, 6):
-        number = int(input(f"Digite o {i}. número: "))
+    for i in range(5):
+        number = int(input(f"Digite o {i+1}º número: "))
         numbers.append(number)
 
     even_numbers = list(filter(is_even, numbers))
     odd_numbers = list(filter(is_odd, numbers))
-    mean = sum(numbers) / len(numbers)
+    average = sum(numbers) / len(numbers)
 
-    print("Números pares:\n"
-          f"{even_numbers}")
-    print("Números impares:\n"
-          f"{odd_numbers}")
-    print("Média:\n"
-          f"{mean}")
+    print(f"Números pares: {even_numbers}")
+    print(f"Números impares: {odd_numbers}")
+    print(f"Média: {average}")
 
 
 def is_even(num):
@@ -22,7 +19,7 @@ def is_even(num):
 
 
 def is_odd(num):
-    return not (num % 2 == 0)
+    return num % 2 != 0
 
 
 if __name__ == '__main__':
