@@ -27,19 +27,19 @@ def get_grade_average(grades):
 
 
 def print_students(students):
-    bigger_average = students[0]
-    smaller_average = students[0]
+    highest_average = students[0]
+    lowest_average = students[0]
 
     print("Médias: ")
     for student, average in students:
-        if average > bigger_average[1]:
-            bigger_average = student, average
-        if average < smaller_average[1]:
-            smaller_average = student, average
+        if average > highest_average[1]:
+            highest_average = student, average
+        if average < lowest_average[1]:
+            lowest_average = student, average
         print(f"{student}: {average}")
 
-    print(f"Menor média: {smaller_average[0]}, {smaller_average[1]}")
-    print(f"Maior média: {bigger_average[0]}, {bigger_average[1]}")
+    print(f"Menor média: {lowest_average[0]}, {lowest_average[1]}")
+    print(f"Maior média: {highest_average[0]}, {highest_average[1]}")
 
 
 if __name__ == '__main__':
